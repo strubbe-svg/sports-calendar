@@ -2,10 +2,11 @@ name: Sprocket Sports → Calendar
 
 on:
   schedule:
-    # Runs every Sunday at 8:00 PM Eastern (01:00 UTC Monday)
     - cron: "0 1 * * 1"
   workflow_dispatch:
-    # Also allows manual trigger from GitHub Actions tab
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   sync-events:
